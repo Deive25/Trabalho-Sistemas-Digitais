@@ -233,7 +233,6 @@ begin
         s_reset <= '0';
         wait for CLK_PERIOD;
 
-        -- Sequência correta: 10110
         s_data_in <= '1'; wait for CLK_PERIOD;
         s_data_in <= '0'; wait for CLK_PERIOD;
         s_data_in <= '1'; wait for CLK_PERIOD;
@@ -243,7 +242,6 @@ begin
         
         wait for CLK_PERIOD * 2;
 
-        -- Sequência com erro
         s_data_in <= '1'; wait for CLK_PERIOD; 
         s_data_in <= '0'; wait for CLK_PERIOD; 
         s_data_in <= '1'; wait for CLK_PERIOD; 
