@@ -97,8 +97,6 @@ end architecture simulacao;
 ### Resultado da Simulação
 ![Simulação Somador 2 Bits](somador.png)
 
-A simulação mostra todas as 16 combinações possíveis de entrada (0+0 até 3+3) e seus respectivos resultados.
-
 ---
 
 ## Projeto 2: Detector de Sequência "10110"
@@ -260,8 +258,6 @@ end architecture test;
 
 ### Resultado da Simulação
 ![Simulação Detector de Sequência](detector.png)
-
-A simulação valida a detecção da sequência "10110" e mostra o comportamento correto da FSM em casos de falha.
 
 ---
 
@@ -455,12 +451,10 @@ begin
         s_reset <= '0';
         wait for CLK_PERIOD;
 
-        -- Teste 1: Ciclo normal
         wait for 13 sec;
         assert (s_verde = '1')
             report "TESTE 1 FALHOU" severity error;
 
-        -- Teste 2: Pedestre
         wait for 2 sec;
         s_btn <= '1';
         wait for 100 ns;
@@ -479,15 +473,4 @@ end simulation;
 ### Resultado da Simulação
 ![Simulação Semáforo](semaforo.png)
 
-A simulação mostra o ciclo normal do semáforo e o comportamento modificado após o acionamento do botão de pedestre.
-
 ---
-
-## Conclusão
-
-Os três projetos demonstram progressão em complexidade:
-1. **Somador**: circuito combinacional básico
-2. **Detector**: FSM com detecção de padrão
-3. **Semáforo**: FSM com múltiplos estados e temporizadores
-
-Todos os designs foram verificados através de testbenches e simulações que validaram o comportamento esperado.
