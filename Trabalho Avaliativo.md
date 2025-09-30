@@ -259,7 +259,7 @@ end architecture test;
 ```
 
 ### Resultado da Simulação
-![Simulação Detector de Sequência](detector_2.png)
+![Simulação Detector de Sequência](detector.png)
 
 A simulação valida a detecção da sequência "10110" e mostra o comportamento correto da FSM em casos de falha.
 
@@ -477,7 +477,7 @@ end simulation;
 ```
 
 ### Resultado da Simulação
-![Simulação Semáforo](semaforo_2.png)
+![Simulação Semáforo](semaforo.png)
 
 A simulação mostra o ciclo normal do semáforo e o comportamento modificado após o acionamento do botão de pedestre.
 
